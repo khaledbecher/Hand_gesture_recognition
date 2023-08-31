@@ -256,7 +256,9 @@ while True:
 
         # Thumb tip orientation
         diff = ( fingertip_landmarks[0].x - fingertip_landmarks[2].x )
-        # #Detect gestures
+        #Detect gestures
+
+        # Racing game and page scroll control :
         if closed_fist(fingertip_landmarks,palm_landmark) : 
             print("Closed fist !")
         elif thumb_down(fingertip_landmarks,palm_landmark) :
@@ -281,7 +283,7 @@ while True:
                 pyautogui.press('up',presses=150)
                 pyautogui.keyUp('right')
                 
-        
+        # Mouse movement (movement offset = 25) : 
         if(mouse_up(fingertip_landmarks,palm_landmark)):
             print("mouse up !")
             pyautogui.move(0,-25,0.01)    #Move the mouse cursor up
@@ -298,6 +300,8 @@ while True:
         if(mouse_press(fingertip_landmarks,palm_landmark)):
             print("mouse press !")
             pyautogui.click()        #Mouse click
+
+        # Sound volume adjustment :
         if(volume_down(fingertip_landmarks,palm_landmark)):
             print("volume --- !")
             pyautogui.press('volumedown')    #Press volumedown button
