@@ -2,6 +2,10 @@
 
 This project allows you to control your pc and play video games using hand gestures.
 
+To run this project you need to install these dependencies:
+
+-
+
 Check this video to see the tutorial: https://www.linkedin.com/feed/update/urn:li:activity:7103052425992781826/
 
 Notice: -You may need to adjust threshholds in this file according to your hand size.
